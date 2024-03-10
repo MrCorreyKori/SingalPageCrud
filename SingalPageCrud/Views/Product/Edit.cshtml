@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model SingalPageCrud.Models.Product
+
+@if(Model == null)
+{
+    <p>No product found</p>
+}
+
+<h1>Edit Product</h1>
+
+
+<form method="post">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Id</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" asp-for="Id" readonly>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Product</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" asp-for="Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1"> Description  </label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" rows="4" cols="50" asp-for="Description">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">color</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" asp-for="color">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Price</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" asp-for="price">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-danger" asp-controller="Product" asp-action="Delete">Delete</button>
+
+    </div>
+
+
+</form>
